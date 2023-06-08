@@ -3,6 +3,7 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
+import logo from "../img/logo.svg";
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
@@ -22,7 +23,7 @@ const Header = () => {
       <div className="flex container max-auto items-center justify-between h-full ">
         <Link to={"/"}>
           <div>
-            <img className="w-[40px] " src="/src/img/logo.svg" alt="logo" />
+            <img className="w-[40px] " src={logo} alt="logo" />
           </div>
         </Link>
         <div
